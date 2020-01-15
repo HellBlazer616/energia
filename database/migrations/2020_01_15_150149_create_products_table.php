@@ -17,9 +17,9 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('name');
+            $table->unsignedInteger('price');
             $table->unsignedInteger('amount');
-            $table->boolean('supplier_sent')->default(false);
-            $table->boolean('company_received')->default(false);
+            $table->boolean('received_product')->default(false);
         });
     }
 

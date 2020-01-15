@@ -88,8 +88,7 @@
             </div>
 
             <div class="links">
-                <a href="https://127.0.0.1/products">Products</a>
-                <a href="https://127.0.0.1/supplier">Supplier</a>
+                <a href="product/supplier">Supplier Send These Please</a>
             </div>
         </div>
     </div>

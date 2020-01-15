@@ -75,23 +75,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="user_type"
-                                class="col-md-4 col-form-label text-md-right">{{ __('User Type') }}</label>
-
-                            <div class="col-md-3">
-                                <input type="checkbox" class="form-check-input" id="companyCheck"
-                                    value="company" name="user_type">
-                                <label class="form-check-label" for="companyCheck">Company
-                                    Employee</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="checkbox" class="form-check-input" id="supplierCheck"
-                                    value="supplier" name="user_type">
-                                <label class="form-check-label" for="supplierCheck">Supplier
-                                    Employee</label>
-                            </div>
-                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Company;
+use App\Product;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')
+            ->except(['indexSupplier']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +20,19 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+
+        $products = Product::all();
+        return view('product.index', compact('products'));
     }
+
+    public function indexSupplier()
+    {
+
+        $products = Product::all();
+        return view('product.supplier_index', compact('products'));
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +41,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('product.index');
     }
 
     /**
