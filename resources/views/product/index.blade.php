@@ -17,6 +17,7 @@
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Price</th>
+                    <th scope="col">Supplier</th>
                     <th scope="col">Amount</th>
                 </tr>
             </thead>
@@ -26,6 +27,7 @@
                 <tr>
                     <td>{{$product->name}}</td>
                     <td>{{$product->price}}</td>
+                    <td>{{$product->supplier_name}}</td>
                     <td>{{$product->amount}}</td>
                 </tr>
                 @endif

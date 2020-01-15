@@ -20,15 +20,13 @@ class CompanyController extends Controller
      */
     public function index()
     {
-
-        $products = Product::all();
+        $products = Product::where('received_product', 1)->get();
         return view('product.index', compact('products'));
     }
 
     public function indexSupplier()
     {
-
-        $products = Product::all();
+        $products = Product::where('received_product', 0)->get();
         return view('product.supplier_index', compact('products'));
     }
 

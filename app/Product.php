@@ -14,4 +14,10 @@ class Product extends Model
     protected $fillable = [
         'name', 'amount', 'supplier_sent', 'company_received'
     ];
+
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
 }

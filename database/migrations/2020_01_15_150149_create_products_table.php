@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->unsignedInteger('price');
             $table->unsignedInteger('amount');
+            $table->string('supplier_name');
             $table->boolean('received_product')->default(false);
         });
     }

@@ -72,6 +72,17 @@
         <div class="top-right links">
             @auth
             <a href="{{ url('/home') }}">Home</a>
+            <div aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                    style="display: none;">
+                    @csrf
+                </form>
+            </div>
             @else
             <a href="{{ route('login') }}">Login</a>
 
@@ -86,7 +97,11 @@
             <div class="title m-b-md">
                 E-Commerce
             </div>
-
+            @auth
+            <div class="links">
+                <a href="product/company">Inventory</a>
+            </div>
+            @endauth
             <div class="links">
                 <a href="product/supplier">Supplier Send These Please</a>
             </div>

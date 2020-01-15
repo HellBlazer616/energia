@@ -38,8 +38,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
+                    @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="/product/supplier">Supplier Product</a>
+                        <a class="nav-link" href="/product/company">Inventory</a>
+                    </li>
+                    @endauth
+                    <li class="nav-item">
+                        <a class="nav-link" href="/product/supplier">Need to be Sent</a>
                     </li>
 
                 </ul>
